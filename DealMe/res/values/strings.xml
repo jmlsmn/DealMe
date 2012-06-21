@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+    <string name="app_name">DealMe</string>
+<string name="About"><b>DealMe</b> is an online deal finder and browser that will help you find great deals on items you are shopping for.\n\n<b><i>How To\'s</i></b>\n\n<i>Favorites</i>\n\n<u>Browse:</u> You can browse deals that you have saved to your favorites by pressing menu then favorites.\n<u>Add:</u> Press the blue star when viewing an item to add to favorites.\n<u>Remove:</u> Press the red x when viewing an item to remove a favorite. \n \n <i>Notifications</i>\n\nYou can choose to be notified when a sub-category is updated. To subscribe for notifications press and hold a sub-category until a menu with a checkbox pops up. Here you can choose to be notified.\n\n\nMore info at <i>dealmeandroid.blogspot.com</i></string>
+</resources>

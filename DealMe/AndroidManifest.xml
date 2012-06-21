@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="DealMe.Main"
+      android:versionCode="1"
+      android:versionName="1.0">
+     
+	  
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".DealMe"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+ 
+        </activity>
+
+<activity android:name="Favorites"></activity>
+<activity android:name="SingleItem"></activity>
+<service android:name="NotificationCheck">
+	<intent-filter>
+       <action android:name = "DealMe.Main.NotificationCheck" />
+    </intent-filter>
+</service>
+<receiver android:name="NotificationReceiver" android:enabled="true" android:exported="false">
+	<intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+	</intent-filter>
+</receiver>
+<!-- Track Market installs -->          
+<receiver android:name="com.admob.android.ads.analytics.InstallReceiver"
+android:exported="true">
+<intent-filter>
+   <action android:name="com.android.vending.INSTALL_REFERRER" />
+</intent-filter>
+</receiver>
+
+<activity android:enabled="true" android:name="SearchResult"></activity>
+<activity android:enabled="true" android:name="Search"></activity>
+<activity android:enabled="true" android:name="Help"></activity>
+
+<!-- AdMobActivity definition -->
+<activity android:name="com.admob.android.ads.AdMobActivity"
+android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+android:configChanges="orientation|keyboard|keyboardHidden" />
+
+</application>
+
+
+
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+</manifest> 

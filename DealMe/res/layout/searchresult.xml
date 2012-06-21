@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+ <include android:id="@+id/header"
+         layout="@layout/navigation"
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"
+         android:orientation="vertical"/>
+              
+<ListView android:layout_width="fill_parent"
+ android:layout_height="fill_parent"
+ android:layout_weight="1"
+ android:visibility="gone"
+ android:id="@+id/lvSearch">
+</ListView>
+<TextView android:layout_width="fill_parent"
+ 		  android:layout_height="wrap_content"
+ 		  android:layout_weight="1"
+ 		  android:visibility="gone"
+ 		  android:text="No results found..."
+ 		  android:id="@+id/txtEmpty">
+</TextView>
+</LinearLayout>

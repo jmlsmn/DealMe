@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:myapp="http://schemas.android.com/apk/res/DealMe.Main"
+		 android:id="@+id/vfNavigator" 
+         android:layout_width="fill_parent" 
+         android:layout_height="fill_parent"> 
+
+<RelativeLayout android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+         
+<GridView  android:id="@+id/gvCategories"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content"
+		    android:numColumns="2"
+		    android:listSelector="#00000000"
+		    android:horizontalSpacing="2dp"
+		    android:verticalSpacing="2dp"
+		    
+		    /> 
+		     
+<com.admob.android.ads.AdView
+android:id="@+id/ad"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+myapp:backgroundColor="#000000"
+myapp:primaryTextColor="#FFFFFF"
+myapp:secondaryTextColor="#CCCCCC" />
+</RelativeLayout>
+
+<RelativeLayout android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+ <include android:id="@+id/header"
+         layout="@layout/navigation"
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"
+         android:orientation="vertical"
+         android:layout_alignParentTop="true"/>
+              
+<ListView android:layout_width="fill_parent"
+ android:layout_height="fill_parent"
+ android:layout_below="@+id/header"
+ android:id="@+id/lvChildCategories">
+</ListView>
+</RelativeLayout>
+
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">          
+<ListView android:layout_width="fill_parent"
+ android:layout_height="fill_parent"
+ android:layout_weight="1"
+ android:id="@+id/lvEntries">
+</ListView>
+
+</LinearLayout>
+ <include android:id="@+id/single"
+         layout="@layout/singleitem"
+         android:layout_height="fill_parent"
+         android:layout_width="fill_parent"
+         android:orientation="vertical"/>
+</ViewFlipper>

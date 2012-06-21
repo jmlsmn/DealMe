@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:myapp="http://schemas.android.com/apk/res/DealMe.Main"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" 
+  android:orientation="vertical">
+  
+  <include android:id="@+id/header"
+         layout="@layout/navigation"
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"/>
+         
+  <EditText android:id="@+id/txtSearch"
+ 		    android:layout_height="wrap_content"
+            android:layout_width="fill_parent"/>
+          
+<Button  android:id="@+id/btnSearch"
+		 android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:text="Search"/>	
+<com.admob.android.ads.AdView
+android:id="@+id/ad"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+myapp:backgroundColor="#000000"
+myapp:primaryTextColor="#FFFFFF"
+myapp:secondaryTextColor="#CCCCCC" />
+</LinearLayout>
